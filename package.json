@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-project",
+  "version": "1.0.0",
+  "description": "Simple Tailwind CSS project",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "copy-html": "cp src/index.html dist/index.html",
+    "deploy": "npm run build && npm run copy-html && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17"
+  }
+}
